@@ -27,15 +27,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/black"
+            android:text="Push The button"
 
-            android:text="TextView" />
+            android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/dice_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:src="@drawable/empty_dice"
             tools:srcCompat="@drawable/dice_1" />
 
         <Button
