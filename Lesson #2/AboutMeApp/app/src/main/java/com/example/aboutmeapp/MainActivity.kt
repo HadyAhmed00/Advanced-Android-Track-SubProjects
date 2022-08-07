@@ -8,25 +8,29 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.aboutmeapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        var done_btn:Button = findViewById(R.id.button)
-        var nikname:EditText= findViewById(R.id.editTextTextPersonName)
-        var name_txt:TextView= findViewById(R.id.textView4)
-        done_btn.setOnClickListener{
+        var b = ActivityMainBinding.inflate(layoutInflater)
 
-            var hide = name_txt.visibility
-            var show = done_btn.visibility
+        setContentView(b.root)
 
-            name_txt.setText(nikname.text.toString())
-            name_txt.visibility=show
-            done_btn.visibility=hide
-            nikname.visibility= hide
+//        var done_btn=b.button
+//        var nikname= b.editTextTextPersonName
+//        var name_txt=b.textView4
+        b.button.setOnClickListener{
+
+            var hide = b.textView4.visibility
+            var show = b.button.visibility
+
+            b.textView4.setText(b.editTextTextPersonName.text.toString())
+            b.textView4.visibility=show
+            b.button.visibility=hide
+            b.editTextTextPersonName.visibility= hide
 
         }
     }
