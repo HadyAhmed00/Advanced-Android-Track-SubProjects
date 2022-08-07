@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ColorMyView</string>
+    <string name="BoxOne" > Box One</string>
+    <string name="BoxTwo" > Box Two</string>
+    <string name="BoxThree" > Box Three</string>
+    <string name="BoxFour" > Box Four</string>
+    <string name="BoxFive" > Box Five</string>
+    <string name="Red" > Red</string>
+    <string name="Yellow" > Yellow</string>
+    <string name="Greed" > Greed</string>
+</resources>
