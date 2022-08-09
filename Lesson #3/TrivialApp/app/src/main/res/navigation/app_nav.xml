@@ -10,7 +10,8 @@
         android:label="TitleFragment" >
         <action
             android:id="@+id/action_titleFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/fadin" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -24,6 +25,7 @@
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment22"
             app:destination="@id/gameOverFragment2"
+            app:enterAnim="@anim/fadin"
             app:popUpTo="@id/titleFragment" />
     </fragment>
     <fragment
