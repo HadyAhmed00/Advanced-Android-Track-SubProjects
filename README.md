@@ -10,6 +10,7 @@
   ## Lesson #1
 * [Dice Roller App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/DiceRoller)
  ## Lesson #2
-* [Dice Roller App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Lesson%20%232/AboutMeApp)
-
-
+* [About Me App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Lesson%20%232/AboutMeApp)
+* [Color My View](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Lesson%20%232/ColorMyView)
+ ## Lesson #3
+* [Trivial App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Lesson%20%233/TrivialApp)

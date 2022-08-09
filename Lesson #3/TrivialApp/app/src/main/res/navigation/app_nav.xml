@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.android.navigation.AboutFragment"
-        android:label="fragment_about"
+        android:label="@string/title_about_trivia"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/rulesFragment"
