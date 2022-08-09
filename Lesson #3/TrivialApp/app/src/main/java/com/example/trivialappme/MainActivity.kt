@@ -15,11 +15,16 @@ class MainActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_main)
         @Suppress("UNUSED_VARIABLE")
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-        var id : Int = R.id.myNavHostFragment
-//        val navController = this.findNavController(id)
+//        var id : Int = R.id.myNaveContrloer
+        val navController = this.findNavController(R.id.myNaveContrloer)
+        NavigationUI.setupActionBarWithNavController(this, navController)
+
     }
 
-
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.myNaveContrloer)
+        return navController.navigateUp()
+    }
 
 
 }
