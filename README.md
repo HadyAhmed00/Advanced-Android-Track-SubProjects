@@ -6,13 +6,21 @@
 
 <br>
 
-## Porjects:
+# Part 1:
   ## Lesson #1
-* [Dice Roller App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/DiceRoller)
+* [Dice Roller App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%231/Lesson%20%231/DiceRoller)
  ## Lesson #2
-* [About Me App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Lesson%20%232/AboutMeApp)
-* [Color My View](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Lesson%20%232/ColorMyView)
+* [About Me App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%231/Lesson%20%232/AboutMeApp)
+* [Color My View](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%231/Lesson%20%232/ColorMyView)
  ## Lesson #3
-* [Trivial App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Lesson%20%233/TrivialApp)
+* [Trivial App](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%231/Lesson%20%233/TrivialApp)
  ## Lesson #4
-* [DessertPusher](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Lesson%20%234/DessertPusher)
+* [DessertPusher](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%231/Lesson%20%234/DessertPusher)
+ ## Lesson #5
+* [Guess It](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%231/Lesson%20%235/GuessIt)
+
+<br>
+
+# Part 2: 
+  ## Lesson #1
+  * [Sleep Tracker](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%232/Lesson%231/SleepTracker)
