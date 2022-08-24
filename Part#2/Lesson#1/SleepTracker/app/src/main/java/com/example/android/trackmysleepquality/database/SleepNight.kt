@@ -14,5 +14,5 @@ data class SleepNight(
     @ColumnInfo (name = "end_time_Millis")
     var endTime: Long = System.currentTimeMillis(),
     @ColumnInfo (name = "rate")
-    val quality: Int = -1
+    var quality: Int = -1
 )
