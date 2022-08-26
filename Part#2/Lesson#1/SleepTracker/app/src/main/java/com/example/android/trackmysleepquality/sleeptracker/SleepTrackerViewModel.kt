@@ -30,8 +30,8 @@ import kotlinx.coroutines.launch
 class SleepTrackerViewModel(
         val database: SleepDatabaseDao,
         application: Application) : AndroidViewModel(application) {
-        private var tonight = MutableLiveData<SleepNight?>()
-        private val nights = database.getAllNights()
+        var tonight = MutableLiveData<SleepNight?>()
+        val nights = database.getAllNights()
 
         private val _navigateToSleepQuality = MutableLiveData<SleepNight>()
 

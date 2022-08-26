@@ -23,6 +23,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.trackmysleepquality.R
+import com.example.android.trackmysleepquality.TextItemViewHolder
 import com.example.android.trackmysleepquality.database.SleepNight
 import com.example.android.trackmysleepquality.databinding.ListItemSleepNightBinding
 import kotlinx.coroutines.CoroutineScope
@@ -135,3 +136,4 @@ sealed class DataItem {
 
     abstract val id: Long
 }
+
