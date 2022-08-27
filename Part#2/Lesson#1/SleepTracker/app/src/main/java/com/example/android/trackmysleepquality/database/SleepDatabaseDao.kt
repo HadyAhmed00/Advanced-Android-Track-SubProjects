@@ -44,4 +44,7 @@ interface SleepDatabaseDao
 
     @Query("SELECT * from sleep_data_table WHERE nabId = :key")
     suspend fun get(key: Long): SleepNight?
+
+    @Query("SELECT * from sleep_data_table WHERE nabId = :key")
+    fun getNightWithId(key: Long): LiveData<SleepNight>
 }

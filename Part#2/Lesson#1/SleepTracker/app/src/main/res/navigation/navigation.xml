@@ -50,5 +50,8 @@
             app:popUpTo="@+id/sleep_tracker_fragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <argument
+        android:name="sleepNightKey"
+        app:argType="long" />
 
 </navigation>
