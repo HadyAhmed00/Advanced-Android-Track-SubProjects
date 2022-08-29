@@ -41,11 +41,11 @@ class OverviewViewModel : ViewModel() {
 
     // Internally, we use a MutableLiveData, because we will be updating the MarsProperty with
     // new values
-    private val _property = MutableLiveData<MarsProperty>()
+    private val _propertyes = MutableLiveData<List<MarsProperty>>()
 
     // The external LiveData interface to the property is immutable, so only this class can modify
-    val property: LiveData<MarsProperty>
-        get() = _property
+    val propertyes: LiveData<List<MarsProperty>>
+        get() = _propertyes
 
 
     /**
@@ -63,10 +63,10 @@ class OverviewViewModel : ViewModel() {
     private fun getMarsRealEstateProperties() {
         viewModelScope.launch {
             try {
-                var listResult = MarsApi.retrofitService.getProperties()
+                val listResult = MarsApi.retrofitService.getProperties()
                 _status.value = "Success: ${listResult.size} Mars properties retrieved"
                 if (listResult.size > 0) {
-                    _property.value = listResult[0]
+                    _propertyes.value = listResult
                 }
             } catch (e: Exception) {
                 _status.value = "Failure: ${e.message}"
