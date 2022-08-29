@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.example.android.marsrealestate.MainActivity">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/photos_grid"
             android:layout_width="0dp"
@@ -45,22 +46,17 @@
             app:listData="@{viewModel.properties}"
             app:spanCount="2"
             tools:itemCount="16"
-            tools:listitem="@layout/grid_view_item" >
-
-        </androidx.recyclerview.widget.RecyclerView>
+            tools:listitem="@layout/grid_view_item" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:id="@+id/status_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/ic_broken_image"
-            android:layout_marginStart="@{viewModel.status}"
-            />
+            app:marsApiStatus="@{viewModel.status}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
