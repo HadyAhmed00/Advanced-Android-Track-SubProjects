@@ -17,6 +17,7 @@
 
 package com.example.android.marsrealestate
 
+import PhotoGridAdapter
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -27,7 +28,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.android.marsrealestate.network.MarsProperty
 import com.example.android.marsrealestate.overview.MarsApiStatus
-import com.example.android.marsrealestate.overview.PhotoGridAdapter
+//import com.example.android.marsrealestate.overview.PhotoGridAdapter
 
 /**
  * When there is no Mars property data (data is null), hide the [RecyclerView], otherwise show it.
