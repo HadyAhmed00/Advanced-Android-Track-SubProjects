@@ -24,3 +24,15 @@
 # Part 2: 
   ## Lesson #1
   * [Sleep Tracker](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%232/Lesson%231/SleepTracker)
+  
+  ## Lesson #2
+  * [SleepTrackerWithRecyclerview](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%232/Lesson%232/SleepTrackerWithRecyclerview)
+  
+  ## Lesson #3
+  * [MarsRealEstate](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%232/Lesson%233/MarsRealEstate)
+  
+  ## Lesson #4
+  * [DevBytes](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%232/Lesson%234/DevBytes)
+  
+  ## Lesson #5
+  * [DGD](https://github.com/HadyAhmed00/Advanced-Android-Track-SubProjects/tree/main/Part%232/Lesson%235/DGD)
