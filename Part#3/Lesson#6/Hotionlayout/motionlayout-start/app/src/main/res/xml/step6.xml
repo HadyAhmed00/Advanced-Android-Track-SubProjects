@@ -64,6 +64,10 @@
                     app:motionTarget="@id/credits"
                     android:alpha="0.0"
             />
+            <KeyAttribute
+                app:motionTarget="@id/moon"
+                app:framePosition="0"
+                android:alpha="0.5" />
 
             <!-- TODO Add Custom attributes here -->
 

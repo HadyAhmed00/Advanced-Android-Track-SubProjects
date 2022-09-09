@@ -26,6 +26,35 @@
                 app:targetId="@id/moon"
                 app:clickAction="toggle"
         />
+        <KeyFrameSet >
+            <KeyPosition
+                app:motionTarget="@+id/moon"
+                app:framePosition="50"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.5" />
+            <KeyCycle
+                app:motionTarget="@+id/moon"
+                app:framePosition="59"
+                app:wavePeriod="0.25"
+                android:rotation="90"
+                app:waveOffset="0"
+                android:scaleX="2"
+                android:scaleY="2" />
+            <KeyPosition
+                app:motionTarget="@+id/moon"
+                app:framePosition="75"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.6" />
+            <KeyPosition
+                app:motionTarget="@+id/background"
+                app:framePosition="25"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.6" />
+            <KeyAttribute
+                app:motionTarget="@+id/background"
+                app:framePosition="50"
+                android:alpha="0.5"/>
+                    </KeyFrameSet>
 
         <!-- TODO: Add KeyFrameSet and KeyPosition -->
     </Transition>
