@@ -16,14 +16,18 @@
 
 package com.google.samples.propertyanimation
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.ObjectAnimator
+import android.animation.*
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
+import android.view.animation.AccelerateInterpolator
+import android.view.animation.LinearInterpolator
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatImageView
 
 
 class MainActivity : AppCompatActivity() {
@@ -76,42 +80,105 @@ class MainActivity : AppCompatActivity() {
     private fun rotater() {
         val animator = ObjectAnimator.ofFloat(star, View.ROTATION, -360f, 0f)
         animator.duration = 1000
-        animator.addListener(object : AnimatorListenerAdapter() {
-            override fun onAnimationStart(animation: Animator?) {
-                rotateButton.isEnabled = false
-            }
-            override fun onAnimationEnd(animation: Animator?) {
-                rotateButton.isEnabled = true
-            }
-        })
+        animator.lockView(rotateButton)
         animator.start()
     }
 
     private fun translater() {
         val animator = ObjectAnimator.ofFloat(star, View.TRANSLATION_X, 200f)
         animator.repeatCount =1
-        animator.duration = 1000
-        animator.addListener(object : AnimatorListenerAdapter() {
-            override fun onAnimationStart(animation: Animator?) {
-                translateButton.isEnabled = false
-            }
-            override fun onAnimationEnd(animation: Animator?) {
-                translateButton.isEnabled = true
-            }
-        })
+        animator.repeatMode = ObjectAnimator.REVERSE
+        animator.lockView(translateButton)
         animator.start()
     }
 
+
+
     private fun scaler() {
+        val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X,4f)
+        val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y,4f)
+        val animator = ObjectAnimator.ofPropertyValuesHolder(star,scaleX,scaleY)
+        animator.repeatCount=1
+        animator.repeatMode= ObjectAnimator.REVERSE
+        animator.lockView(scaleButton)
+        animator.start()
+
     }
 
     private fun fader() {
+
+        val animator = ObjectAnimator.ofFloat(star,View.ALPHA,0F)
+        animator.repeatCount=1
+        animator.repeatMode=ObjectAnimator.REVERSE
+        animator.lockView(fadeButton)
+
+        animator.start()
     }
 
     private fun colorizer() {
+
+        var animator = ObjectAnimator.ofArgb(star.parent,
+            "backgroundColor", Color.BLACK, Color.RED)
+        animator.setDuration(500)
+        animator.repeatCount = 1
+//        animator.duration = 1100
+        animator.repeatMode = ObjectAnimator.REVERSE
+        animator.lockView(colorizeButton)
+        animator.start()
     }
 
     private fun shower() {
+        val container = star.parent as ViewGroup
+
+        val containerW = container.width
+        val containerH = container.height
+
+        var starW = star.width.toFloat()
+        var starH = star.height.toFloat()
+
+        val newStar = AppCompatImageView(this)
+
+        newStar.setImageResource(R.drawable.ic_star)
+
+        newStar.layoutParams= FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,FrameLayout.LayoutParams.WRAP_CONTENT)
+
+        newStar.scaleX = (Math.random().toFloat() * 1.5+1).toFloat()
+        newStar.scaleY= newStar.scaleX
+        starW *= newStar.scaleX
+        starH *=newStar.scaleY
+        container.addView(newStar)
+        newStar.translationX = Math.random().toFloat() *containerW - starW /2
+        val mover = ObjectAnimator.ofFloat(newStar, View.TRANSLATION_Y,
+            -starH, containerH + starH)
+        mover.interpolator = AccelerateInterpolator(1f)
+        val rotator = ObjectAnimator.ofFloat(newStar, View.ROTATION,
+            (Math.random() * 1080).toFloat())
+        rotator.interpolator = LinearInterpolator()
+
+        val set = AnimatorSet()
+        set.playTogether(mover, rotator)
+        set.duration = (Math.random() * 1500 + 500).toLong()
+
+        set.addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationEnd(animation: Animator?) {
+                container.removeView(newStar)
+            }
+        })
+        set.start()
+
+
+    }
+
+    private fun Animator.lockView(btn: View) {
+        addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationStart(animation: Animator?) {
+                btn.isEnabled = false
+            }
+
+            override fun onAnimationEnd(animation: Animator?) {
+                btn.isEnabled = true
+            }
+        })
     }
 
 }
