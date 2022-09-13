@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Wander</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal">Normal View</string>
+    <string name="terrain">Terrain View</string>
+    <string name="satellite">Satellite View</string>
+    <string name="hyperid">Hybrid View</string>
+</resources>
