@@ -53,6 +53,12 @@ dependencies {
     implementation 'androidx.preference:preference-ktx:1.1.0-rc01'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.firebaseui:firebase-ui-auth:5.0.0'
+    /*// Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.4.1')
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth-ktx'*/
     testImplementation 'junit:junit:4.12'
 }
 
