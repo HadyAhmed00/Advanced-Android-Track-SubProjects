@@ -18,16 +18,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.example.android.firebaseui_login_sample"
         minSdkVersion 19
-        targetSdkVersion 33
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -36,13 +35,6 @@ android {
     }
     dataBinding {
         enabled = true
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
     }
 }
 
@@ -61,8 +53,6 @@ dependencies {
     implementation 'androidx.preference:preference-ktx:1.1.0-rc01'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.firebaseui:firebase-ui-auth:5.0.0'
-//    implementation 'com.google.firebase:firebase-auth-ktx:21.0.8'
-
     testImplementation 'junit:junit:4.12'
 }
 
